@@ -40,7 +40,7 @@ export function AboutSection() {
           <div className="space-y-6 mb-12">
             <p className="text-lg text-muted-foreground leading-relaxed">
               I'm currently studying{" "}
-              <span className="text-primary font-semibold">BSc Software Engineering (Honours) Degree</span> at
+              <span className="text-primary font-semibold">BSc Software Engineering (Honours)</span> at
               <span className="text-foreground font-semibold"> Open University of Sri Lanka</span>. I enjoy building web
               apps and learning new technologies. My journey in tech started with a curiosity about how websites work,
               which led me to pursue formal education in ICT.
