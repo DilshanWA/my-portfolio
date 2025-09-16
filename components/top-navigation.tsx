@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
+import { Github, Linkedin, Youtube, Instagram } from "lucide-react"
 
 const navItems = [
   { name: "Home", href: "#home" },
@@ -11,6 +12,13 @@ const navItems = [
   { name: "Projects", href: "#projects" },
   { name: "Education", href: "#education" },
   { name: "Contact", href: "#contact" },
+]
+
+const socialLinks = [
+  { icon: Youtube, href: "#", label: "YouTube" },
+  { icon: Instagram, href: "#", label: "Instagram" },
+  { icon: Github, href: "https://github.com/DilshanWA", label: "GitHub" },
+  { icon: Linkedin, href: "https://www.linkedin.com/in/dilshan-madusanka", label: "LinkedIn" },
 ]
 
 export function TopNavigation() {
@@ -49,17 +57,24 @@ export function TopNavigation() {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) => (
-              <button
-                key={item.name}
-                onClick={() => scrollToSection(item.href)}
-                className="text-muted-foreground hover:text-primary transition-colors duration-200 font-medium"
-              >
-                {item.name}
-              </button>
-            ))}
-          </div>
+          <div className="flex  gap-2 ">
+                  {socialLinks.map((social, index) => {
+                    const Icon = social.icon
+                    return (
+                      <Button
+                        key={index}
+                        variant="ghost"
+                        size="icon"
+                        asChild
+                        className="w-10 h-10 rounded-full bg-card/30 backdrop-blur-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground transition-all duration-300"
+                      >
+                        <a href={social.href} target="_blank" rel="noopener noreferrer">
+                          <Icon className="w-4 h-4" />
+                        </a>
+                      </Button>
+                    )
+                  })}
+                </div>
 
           {/* Mobile Menu Button */}
           <Button variant="ghost" size="sm" className="md:hidden" onClick={() => setIsOpen(!isOpen)}>

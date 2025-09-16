@@ -76,8 +76,7 @@ export function VerticalNavigation() {
         })}
       </div>
 
-      {/* Social Links */}
-      <div className="flex flex-col gap-2 mt-4 pt-4 border-t border-border">
+      {/*<div className="flex flex-col gap-2 mt-4 pt-4 border-t border-border">
         {socialLinks.map((social, index) => {
           const Icon = social.icon
           return (
@@ -94,7 +93,8 @@ export function VerticalNavigation() {
             </Button>
           )
         })}
-      </div>
+      </div> */}
+      
     </nav>
   )
 }
